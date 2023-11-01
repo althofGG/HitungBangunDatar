@@ -24,17 +24,26 @@ def calculate_area(name):\
         luas = s * s
         keliling = 4 * s
         print(f"Luas persegi adalah : {luas} \nKeliling persegi adalah : {keliling}" )
+    
+    elif name == "3":
+        b = int(input("Masukan panjang alas segitiga sama sisi: "))
+        h = int(input("Masukan tinggi segitiga sisi : "))
+        
+        # calculate area of triangle
+        luas = 0.5 * b * h
+        keliling = 3 * b
+        print(f"Luas segitiga sama sisi adalah : {luas} \nKeliling segitiga sama sisi adalah : {keliling}" )
    
      
     else:
         print("Pilihan tidak tersedia, harap masukan angka dari 1-4")
-        calculate_area(input("\n 1. Persegi Panjang \n 2. Persegi \n Masukan nomor bangun datar yang ingin anda hitung :"))
+        calculate_area(input("\n 1. Persegi Panjang \n 2. Persegi \n 3. Segitiga \n Masukan nomor bangun datar yang ingin anda hitung :"))
  
 # driver code
 if __name__ == "__main__" :
    
   print("Calculate Shape Area")
-  shape_name = input("\n 1. Persegi Panjang \n 2. Persegi \n Masukan nomor bangun datar yang ingin anda hitung :")
+  shape_name = input("\n 1. Persegi Panjang \n 2. Persegi \n 3. Segitiga \n Masukan nomor bangun datar yang ingin anda hitung :")
    
   # function calling
   calculate_area(shape_name)
